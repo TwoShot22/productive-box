@@ -3,6 +3,18 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Update gist Manually"
+        required: true
+        default: "TwoShot22"
+      home:
+        description: "location"
+        required: false
+        default: "The Octoverse"
+  repository_dispatch:
+    types: [build-event]
   schedule:
     - cron: "0 0 * * *"
 jobs:
