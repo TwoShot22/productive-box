@@ -8,7 +8,7 @@ on:
       name:
         description: "Update gist Manually"
         required: true
-        default: "TwoShot22"
+        default: "hello-mansoo"
       home:
         description: "location"
         required: false
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update gist
-        uses: TwoShot22/productive-box@master
+        uses: hello-mansoo/productive-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
